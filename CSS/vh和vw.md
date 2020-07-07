@@ -15,10 +15,10 @@ A: Peter-Paul Koch（”PPK大神”）提出视口的解释是：在桌面端�
 
 视口单位中的“视口”，桌面端指的是浏览器的可视区域；移动端指的就是Viewport中的Layout Viewport。
 
-![alt 视口](https://user-gold-cdn.xitu.io/2017/9/7/d42933f33148328c28675ebd378f5823?imageView2/0/w/1280/h/960/ignore-error/1)
+![alt 视口](https://github.com/Tongshisan/Blog/blob/master/img/css-%E8%A7%86%E5%8F%A3.jpeg)
 
 vh/vw 与 % 的区别
 
-![alt vh/vw与 % 的区别](https://user-gold-cdn.xitu.io/2017/9/7/19e9d8cbf9d77d959a8741327dadd3de?imageView2/0/w/1280/h/960/ignore-error/1)
+![alt vh/vw与 % 的区别](https://github.com/Tongshisan/Blog/blob/master/img/css-vh%E5%92%8Cvw%E5%8C%BA%E5%88%AB.jpeg)
 
 *参考连接 https://juejin.im/entry/59b00e46f265da2491513bcc*
