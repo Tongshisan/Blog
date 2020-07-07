@@ -1,10 +1,10 @@
 # 欢迎来到童十三的博客
 
 ## 求一组数据的最大公约数
- + [求一组数据的最大公约数]()
+ + [求一组数据的最大公约数](https://tongshisan.github.io/Blog/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/%E6%B1%82%E4%B8%80%E7%BB%84%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0)
 ## 2020-01-09
- + [判断一个数是否是质数]()
- + [位运算符]()
+ + [判断一个数是否是质数](https://tongshisan.github.io/Blog/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E6%95%B0%E6%98%AF%E5%90%A6%E6%98%AF%E8%B4%A8%E6%95%B0/%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E6%95%B0%E6%98%AF%E5%90%A6%E6%98%AF%E8%B4%A8%E6%95%B0)
+ + [位运算符](https://tongshisan.github.io/Blog/%E5%85%B6%E4%BB%96/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6)
 
 ## 2019-12-28
 + [输入框禁止输入和粘贴非数字](https://tongshisan.github.io/Blog/HTML/%E8%BE%93%E5%85%A5%E6%A1%86%E7%A6%81%E6%AD%A2%E8%BE%93%E5%85%A5%E5%92%8C%E7%B2%98%E8%B4%B4%E9%9D%9E%E6%95%B0%E5%AD%97/%E8%BE%93%E5%85%A5%E6%A1%86%E7%A6%81%E6%AD%A2%E8%BE%93%E5%85%A5%E5%92%8C%E7%B2%98%E8%B4%B4%E9%9D%9E%E6%95%B0%E5%AD%97)
