@@ -2,7 +2,7 @@
 
 ## 2020-01-19
  + [求一组数据的最大公约数](https://tongshisan.github.io/Blog/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/%E6%B1%82%E4%B8%80%E7%BB%84%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0)
- + [进制转换]()
+ + [进制转换](https://tongshisan.github.io/Blog/JS/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2)
 ## 2020-01-09
  + [判断一个数是否是质数](https://tongshisan.github.io/Blog/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E6%95%B0%E6%98%AF%E5%90%A6%E6%98%AF%E8%B4%A8%E6%95%B0/%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E6%95%B0%E6%98%AF%E5%90%A6%E6%98%AF%E8%B4%A8%E6%95%B0)
  + [位运算符](https://tongshisan.github.io/Blog/%E5%85%B6%E4%BB%96/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6)
