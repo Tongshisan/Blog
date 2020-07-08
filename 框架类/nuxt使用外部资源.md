@@ -1,7 +1,7 @@
 # nuxt使用外部资源
 ### 全局配置
 
-```
+``` js
 module.exports = {
   head: {
     script: [
@@ -15,7 +15,7 @@ module.exports = {
 ```
 
 ### 局部配置
-```
+```js
 <template>
   <h1>使用 jQuery 和 Roboto 字体的关于页</h1>
 </template>

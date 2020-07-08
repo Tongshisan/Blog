@@ -1,6 +1,6 @@
 # nodejs 修改文件内容
 
-```
+```js
 const express = require('express')
 const fs = require('fs')
 

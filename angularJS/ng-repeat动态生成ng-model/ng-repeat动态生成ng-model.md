@@ -1,7 +1,7 @@
 # ng-repeat 动态生成 ng-model
 
 ## html
-```
+```js
 <div ng-repeat="item in items">
     <span>{{item}}</span>    
     <input type="text" ng-model="$parent.arr[index]">
@@ -9,7 +9,7 @@
 ```
 
 ## controller
-```
+```js
 $scope.arr = []
 
 ```
