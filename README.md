@@ -1,8 +1,12 @@
 # 欢迎来到童十三的博客
 
+## 2020-07-07
++ [git不用每次输入用户名和密码]()
+
 ## 2020-03-10
 + [nuxt使用外部资源](https://tongshisan.github.io/Blog/%E6%A1%86%E6%9E%B6%E7%B1%BB/nuxt%E4%BD%BF%E7%94%A8%E5%A4%96%E9%83%A8%E8%B5%84%E6%BA%90)
-+ [nuxt使用JQuery]()
++ [nuxt使用JQuery](https://tongshisan.github.io/Blog/%E6%A1%86%E6%9E%B6%E7%B1%BB/nuxt%E4%BD%BF%E7%94%A8%E5%A4%96%E9%83%A8%E8%B5%84%E6%BA%90)
+
 ## 2020-03-06
  + [vh 和 vw](https://tongshisan.github.io/Blog/CSS/vh%E5%92%8Cvw)
 
