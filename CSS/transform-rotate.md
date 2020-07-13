@@ -5,7 +5,7 @@ HTML
 ```html
 <div class="cards">
 	<div class="card">
-    	<div calss="front">	正面 </div>
+    	<div class="front">	正面 </div>
         <div class="back"> 反面 </div>
     </div>
 </div>
