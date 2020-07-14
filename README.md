@@ -32,7 +32,7 @@
 + [高度塌陷](https://tongshisan.github.io/Blog/CSS/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7)
 
 ## 2020-05-08
-+ [闭包]()
++ [闭包](https://tongshisan.github.io/Blog/JS/%E9%97%AD%E5%8C%85)
 
 ## 2020-03-20
 + [nuxt使用vant](https://tongshisan.github.io/Blog/%E6%A1%86%E6%9E%B6%E7%B1%BB/nuxt/nuxt%E4%BD%BF%E7%94%A8vant)
