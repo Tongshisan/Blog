@@ -23,14 +23,14 @@
 + [angularJS视图不更新](https://tongshisan.github.io/Blog/angularJS/angularJs%E8%A7%86%E5%9B%BE%E4%B8%8D%E5%8F%8A%E6%97%B6%E6%9B%B4%E6%96%B0)
 
 ## 2020-06-08
-+ [nuxt中使用echarts]()
++ [nuxt中使用echarts](https://tongshisan.github.io/Blog/%E6%A1%86%E6%9E%B6%E7%B1%BB/nuxt/nuxt%E4%B8%AD%E4%BD%BF%E7%94%A8echarts)
 
 ## 2020-03-20
-+ [nuxt使用vant](https://tongshisan.github.io/Blog/%E6%A1%86%E6%9E%B6%E7%B1%BB/nuxt%E4%BD%BF%E7%94%A8vant)
++ [nuxt使用vant](https://tongshisan.github.io/Blog/%E6%A1%86%E6%9E%B6%E7%B1%BB/nuxt/nuxt%E4%BD%BF%E7%94%A8vant)
 
 ## 2020-03-10
-+ [nuxt使用外部资源](https://tongshisan.github.io/Blog/%E6%A1%86%E6%9E%B6%E7%B1%BB/nuxt%E4%BD%BF%E7%94%A8%E5%A4%96%E9%83%A8%E8%B5%84%E6%BA%90)
-+ [nuxt使用JQuery](https://tongshisan.github.io/Blog/%E6%A1%86%E6%9E%B6%E7%B1%BB/nuxt%E4%BD%BF%E7%94%A8%E5%A4%96%E9%83%A8%E8%B5%84%E6%BA%90)
++ [nuxt使用外部资源](https://tongshisan.github.io/Blog/%E6%A1%86%E6%9E%B6%E7%B1%BB/nuxt/nuxt%E4%BD%BF%E7%94%A8%E5%A4%96%E9%83%A8%E8%B5%84%E6%BA%90)
++ [nuxt使用JQuery](https://tongshisan.github.io/Blog/%E6%A1%86%E6%9E%B6%E7%B1%BB/nuxt/nuxt%E4%BD%BF%E7%94%A8JQuery)
 
 ## 2020-03-06
  + [vh 和 vw](https://tongshisan.github.io/Blog/CSS/vh%E5%92%8Cvw)
