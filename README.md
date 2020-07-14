@@ -19,6 +19,9 @@
 ## 2020-07-07
 + [git不用每次输入用户名和密码](https://tongshisan.github.io/Blog/git/git%E4%B8%8D%E7%94%A8%E6%AF%8F%E6%AC%A1%E9%83%BD%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81)
 
+## 2020-06-10
++ [angularJS视图不更新]()
+
 ## 2020-03-20
 + [nuxt使用vant](https://tongshisan.github.io/Blog/%E6%A1%86%E6%9E%B6%E7%B1%BB/nuxt%E4%BD%BF%E7%94%A8vant)
 
