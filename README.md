@@ -7,6 +7,9 @@
 ## 2020-07-13
 + [数字整数部分每隔三位加逗号](https://tongshisan.github.io/Blog/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/%E6%95%B0%E5%AD%97%E6%AF%8F%E9%9A%94%E4%B8%89%E4%BD%8D%E5%8A%A0%E9%80%97%E5%8F%B7)
 
+## 2020-07-10
++ [gitlab CI/CD]()
+
 ## 2020-07-09
 + [css div旋转](https://tongshisan.github.io/Blog/CSS/transform-rotate)
 
