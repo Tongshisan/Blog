@@ -48,6 +48,7 @@
 
 ## 2020-04-18
 + [浏览器缓存](https://tongshisan.github.io/Blog/%E5%85%B6%E4%BB%96/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98)
++ [添加DOM + 事件委托](https://tongshisan.github.io/Blog/JS/fragment)
 
 ## 2020-04-17
 + [浅拷贝](https://tongshisan.github.io/Blog/JS/%E6%B5%85%E6%8B%B7%E8%B4%9D)
