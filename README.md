@@ -35,7 +35,7 @@
 + [echarts 饼图默认高亮](https://tongshisan.github.io/Blog/%E6%A1%86%E6%9E%B6%E7%B1%BB/echarts/echarts%E9%A5%BC%E5%9B%BE%E9%BB%98%E8%AE%A4%E9%AB%98%E4%BA%AE)
 
 ## 2020-05-22
-+ [用 Object.prototype.toString 判断值类型]()
++ [用 Object.prototype.toString 判断值类型](https://tongshisan.github.io/Blog/JS/%E7%94%A8%20Object.prototype.toString%20%E5%88%A4%E6%96%AD%E5%80%BC%E7%B1%BB%E5%9E%8B)
 
 ## 2020-05-08
 + [闭包](https://tongshisan.github.io/Blog/JS/%E9%97%AD%E5%8C%85)
