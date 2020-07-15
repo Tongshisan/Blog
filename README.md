@@ -49,6 +49,9 @@
 ## 2020-04-18
 + [浏览器缓存](https://tongshisan.github.io/Blog/%E5%85%B6%E4%BB%96/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98)
 
+## 2020-04-17
++ [浅拷贝](https://tongshisan.github.io/Blog/JS/%E6%B5%85%E6%8B%B7%E8%B4%9D)
+
 ## 2020-04-08
 + [markdown 锚点连接](https://tongshisan.github.io/Blog/%E5%85%B6%E4%BB%96/markdown%E9%94%9A%E7%82%B9%E8%BF%9E%E6%8E%A5)
 
