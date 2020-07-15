@@ -52,6 +52,10 @@
 ## 2020-04-17
 + [浅拷贝](https://tongshisan.github.io/Blog/JS/%E6%B5%85%E6%8B%B7%E8%B4%9D)
 + [instanceof](https://tongshisan.github.io/Blog/JS/instanceof)
+
+## 2020-04-14
++ [new 操作符](https://tongshisan.github.io/Blog/JS/new)
+
 ## 2020-04-08
 + [markdown 锚点连接](https://tongshisan.github.io/Blog/%E5%85%B6%E4%BB%96/markdown%E9%94%9A%E7%82%B9%E8%BF%9E%E6%8E%A5)
 
