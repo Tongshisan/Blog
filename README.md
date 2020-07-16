@@ -62,6 +62,9 @@
 ## 2020-04-10
 + [git 基于一次 commit 提交创建一个新分支](https://tongshisan.github.io/Blog/git/%E5%9F%BA%E4%BA%8E%E4%B8%80%E6%AC%A1%20commit%20%E5%88%9B%E5%BB%BA%E6%96%B0%E5%88%86%E6%94%AF)
 
+## 2020-04-09
++ [数组扁平化]()
+
 ## 2020-04-08
 + [markdown 锚点连接](https://tongshisan.github.io/Blog/%E5%85%B6%E4%BB%96/markdown%E9%94%9A%E7%82%B9%E8%BF%9E%E6%8E%A5)
 
