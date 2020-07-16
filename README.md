@@ -70,6 +70,7 @@
 ## 2020-04-08
 + [markdown 锚点连接](https://tongshisan.github.io/Blog/%E5%85%B6%E4%BB%96/markdown%E9%94%9A%E7%82%B9%E8%BF%9E%E6%8E%A5)
 + [首屏时间](https://tongshisan.github.io/Blog/%E5%85%B6%E4%BB%96/%E9%A6%96%E5%B1%8F%E6%97%B6%E9%97%B4)
++ [白屏时间]()
 + [String:  slice 和 substring 方法的区别](https://tongshisan.github.io/Blog/JS/String:%20slice%20%E5%92%8C%20substring%20%E6%96%B9%E6%B3%95%E7%9A%84%E5%8C%BA%E5%88%AB)
 
 ## 2020-03-20
