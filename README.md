@@ -64,7 +64,8 @@
 
 ## 2020-04-09
 + [数组扁平化](https://tongshisan.github.io/Blog/JS/%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96)
-+ [节流]()
++ [节流](https://tongshisan.github.io/Blog/JS/%E8%8A%82%E6%B5%81)
++ [函数防抖]()
 
 ## 2020-04-08
 + [markdown 锚点连接](https://tongshisan.github.io/Blog/%E5%85%B6%E4%BB%96/markdown%E9%94%9A%E7%82%B9%E8%BF%9E%E6%8E%A5)
