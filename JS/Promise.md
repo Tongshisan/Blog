@@ -279,10 +279,10 @@ Promise. all(promises) 返回一个 promise 对象
 
 ### 要求
 
- 1. Promise Status
+#### Promise Status
 
     Promise 必须处于以下三种状态之一: pending, fulfilled, rejected
-
+    
     - 如果 Promise 处于 pending 状态
         + 可以变成 fulfilled 或 rejected
     - 如果 Promise 处于 fulfilled 状态
@@ -293,29 +293,94 @@ Promise. all(promises) 返回一个 promise 对象
         + 必须有一个 promise 被 reject 的 reason
     
     概括就是 Promise 的状态只能从 pending 到 fulfilled 或从 pending 到 rejected.若 Promise 成功, 则有成功的 value, 若 Promise 失败, 则有失败的 reason
-2. then 方法
 
-    Promise 必须提供一个 then 方法来访问最终的结果  
-    Promise 的then 方法接收两个参数
+
+
+#### then 方法
+
+Promise 必须提供一个 then 方法来访问最终的结果  
+Promise 的then 方法接收两个参数
+```js
+Promise.then(onFulfilled, onRejected)
+```
+ + onFulfilled 和 onRejected 都是可选参数, 且必须都是函数类型
+
+    
+
+ + 如果 onFulfilled 是函数
     ```js
-    Promise.then(onFulfilled, onRejected)
+    - 必须在 Promise 变成 fulfilled 时调用, 参数是 Promise 的 value
+    - 在 Promise 状态不是 fulfilled 之前不能调用
+    - onFulfilled 只能调用一次
     ```
-     + onFulfilled 和 onRejected 都是可选参数, 且必须都是函数类型
-     + 如果 onFulfilled 是函数
-        + 必须在 Promise 变成 fulfilled 时调用, 参数是 Promise 的 value
-        + 在 Promise 状态不是 fulfilled 之前不能调用
-        + onFulfilled 只能调用一次
-    + 如果 onRejected 是函数
-        + 必须在 Promise 状态变成 rejected 时调用, 参数是 Promise 的 reason
-        + 在 Promise 状态变为 rejected 之前不能调用
-        + onRejected 只能调用一次
-    + onFulfilled 和 onRejected 是微任务
-    + onFulfilled 和 onRejected 必须作为函数被调用
-    + then 方法可能被多次调用
-        + 如果 Promise 变为了 fulfilled 状态, 所有的 onFulfilled 回调都需要按照 then 的顺序执行
-        + 如果 Promise 变为了 rejected 状态, 所有的 onRejected 回调都需要按照 then 的顺序执行
-    + then 必须返回一个 Promise
-        ```js
-            promise2 = promise1.then(onFulfilled, onRejected)
-        ``` 
-        
+    
+    
+    
++ 如果 onRejected 是函数
+    ```
+    - 必须在 Promise 状态变成 rejected 时调用, 参数是 Promise 的 reason
+    - 在 Promise 状态变为 rejected 之前不能调用
+    - onRejected 只能调用一次
+    ```
+    
+    
+    
++ onFulfilled 和 onRejected 是微任务
+
+    
+
++ onFulfilled 和 onRejected 必须作为函数被调用
+
+    
+
++ then 方法可能被多次调用
+    ```
+    - 如果 Promise 变为了 fulfilled 状态, 所有的 onFulfilled 回调都需要按照 then 的顺序执行
+    - 如果 Promise 变为了 rejected 状态, 所有的 onRejected 回调都需要按照 then 的顺序执行
+    ```
+    
+    
+    
++ then 必须返回一个 Promise
+    ```js
+        promise2 = promise1.then(onFulfilled, onRejected)
+    ```
+    
+    ```
+    - onFulfilled 或 onRejected 执行结果为 x , 调用 resolvePromise
+    - 如果 onFulfilled 或 onRejected 执行时抛出异常 e, promises 需要被 reject
+    - 如果 onFulfilled 不是一个函数, promise2 以 promise1 的值 fulfilled
+    - 如果 onRejected 不是一个函数, promise2 以 promise1 的 reason rejected
+    ```
+    
+    
+    
+ #### resolvePromise
+
+    resolvePromise(promise2, x, resolve, reject)
+  + 如果 promise2 和 x 相等, 那么 reject promise with a TypeError
+    
+  + 如果 x 是一个 promise
+    
+    ```
+    - 如果 x 是 pending 状态, 那么 promise 必须要在 penging , 直到 x 变成 fulfilled 或 rejected
+    - 如果 x 被 fulfilled, fulfill promise with a same value
+    - 如果 x 被 rejected, reject promise with a same reason  
+    ```
+
++ 如果 x 是一个 object 或 function
+
+  ```
+  - let then = x.then
+  - 如果 x.then 这步出错, 那么 reject promise with e as the reason
+  - 如果 then 是一个函数, then.call(x, resolvePromise, rejectPromise)
+  		- resolvePromise 的入参是 y, 执行 resolvePromise(promise2, y, resolve, reject)
+  		- rejectPromise 的入参是 r, reject promise with r
+  		- 如果 resolvePromise 和 rejectPromise 都调用了, 那么第一个调用优先, 后面的调用忽略
+  		- 如果调用 then 抛出异常 e
+  				- 如果 resolvePromise 或 rejectPromise 已经被调用, 则忽略
+  				- 否则, reject promise with e as the reason
+  - 如果 then 不是一个 function. fulfill promise with x
+  ```
+
++ 如果 x 不是一个 object 或 function .   fulfill promise with x
