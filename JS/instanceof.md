@@ -9,6 +9,7 @@
         while(true) {
             if(left === null)  return false
             if(left === prototype)  return true
+            left = left.__proto__
         }
     }
 ```
