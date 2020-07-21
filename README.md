@@ -1,7 +1,8 @@
 # 童十三的博客
 
 ## 2020-07-20
-+ [a===1 && a===2 && a===3 为 true]()
++ [a===1 && a===2 && a===3 为 true](https://github.com/Tongshisan/Blog/blob/master/%E5%85%B6%E4%BB%96/a%3D%3D%3D1%20%26%26%20a%3D%3D%3D2%20%26%26%20a%3D%3D%3D%203%20%E4%B8%BA%20true.md)
++ [Promise]()
 
 ## 2020-07-14
 + [gulp task 报错](https://tongshisan.github.io/Blog/%E6%A1%86%E6%9E%B6%E7%B1%BB/gulp/gulp%20task%E6%8A%A5%E9%94%99)
