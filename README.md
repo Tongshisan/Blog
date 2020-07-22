@@ -83,7 +83,8 @@
 
 ## 2020-03-31
 + [数组的 map 方法](https://tongshisan.github.io/Blog/JS/Array.map)
-+ [数组的 filter 方法]()
++ [数组的 filter 方法](https://tongshisan.github.io/Blog/JS/filter)
++ [数组的 reduce 方法]()
 
 ## 2020-03-20
 + [nuxt使用vant](https://tongshisan.github.io/Blog/%E6%A1%86%E6%9E%B6%E7%B1%BB/nuxt/nuxt%E4%BD%BF%E7%94%A8vant)
