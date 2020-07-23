@@ -14,10 +14,21 @@
 
         let res = Construct.apply(obj, arguments)
 
-        return typeOf res === 'object' ? res : obj
+        if(res && typeof res === 'object') || typeof res === 'function') return res
+        return obj
     }
 ```
-
+```js
+    function new() {
+        let obj = {}
+        let [construct, ...args] = [...arguments]
+        obj.__proto__ = construct.prototype
+        let res = construct.apply(obj, args
+        
+        if(res && typeof res === 'object') || typeof res === 'function') return res
+        return obj
+    }
+```
 使用
 
 ```js
