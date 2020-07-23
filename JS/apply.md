@@ -35,4 +35,23 @@
         return res
     }
 ```
+
+```js
+    Function.prototype.apply = function(ctx, rest) {
+        if(!ctx) {
+            // ctx 为 null / undefined 时, 设置默认值
+            ctx = typeof window === 'undefined' ? global : window
+        }
+        ctx.fn = this
+        let result
+        if(rest === 'undefined' || rest === 'null') {
+            // undefined 或 null 不是 Iterator 对象, 不能使用扩展运算符
+            result = ctx.fn(rest)
+        } else if(typeof rest === 'object') {
+            result = ctx.fn(...rest)
+        }
+        delete ctx.fn
+        return result
+    }
+```
 *参考链接: https://github.com/mqyqingfeng/Blog/issues/11*
