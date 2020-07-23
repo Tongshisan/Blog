@@ -243,7 +243,8 @@ Promise. all(promises) 返回一个 promise 对象
     }
 ```
 
- ### Promise. race
+### Promise. race
+
  Promise. race(promises) 返回一个 promise, 他的状态可以是 resolve, 也可以是 reject, 取决于 promises 中第一个返回的是 resolve 还是 reject
  如果传入的参数数组是空, 则返回的 promise 将永远等待
  如果迭代包含一个或多个 非承诺值/ 已解决 / 已拒绝 的承诺, 则 Promise. race 将解析为迭代中找到的第一个值
