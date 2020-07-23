@@ -30,3 +30,18 @@
         return res
     }
 ```
+
+```js
+    Function.prototype.call = function(ctx) {
+        if(!ctx) {
+            ctx = typeof window === 'undefined' ? global : window
+        }
+
+        ctx.fn = this      // this 指向当前函数
+        let rest = [...arguments].slice(1)      // 获取除了 this 指向对象以外的参数
+        let result = ctx.fn(...rest)
+
+        delete ctx.fn
+        return result
+    }
+```
