@@ -1,10 +1,10 @@
 # 童十三的博客
 
 ## 2020-07-27
-+ [nuxt 框架配置 i18n]()
++ [nuxt 框架配置 i18n](https://tongshisan.github.io/Blog/%E6%A1%86%E6%9E%B6%E7%B1%BB/nuxt/nuxt%E4%B8%AD%E9%85%8D%E7%BD%AEi18n)
 
 ## 2020-07-25
-+ [树的深度优先遍历和广度优先遍历]()
++ [树的深度优先遍历和广度优先遍历](https://tongshisan.github.io/Blog/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E5%92%8C%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86)
 
 ## 2020-07-23
 + [web 安全](https://tongshisan.github.io/Blog/%E5%85%B6%E4%BB%96/web%20%E5%AE%89%E5%85%A8)
