@@ -1,5 +1,8 @@
 # 童十三的博客
 
+## 2020-08-03
++ [vue 组件]()
+
 ## 2020-07-27
 + [nuxt 框架配置 i18n](https://tongshisan.github.io/Blog/%E6%A1%86%E6%9E%B6%E7%B1%BB/nuxt/nuxt%E4%B8%AD%E9%85%8D%E7%BD%AEi18n)
 
