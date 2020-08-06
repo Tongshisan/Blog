@@ -2,6 +2,7 @@
 
 ## 2020-08-05
 + [padding 设置百分比]()
++ [js 最小二乘法]()
 
 ## 2020-08-04
 + [Vue 组件通信方式](https://github.com/Tongshisan/Blog/blob/master/vue/%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F.md)
