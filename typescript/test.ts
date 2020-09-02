@@ -1,9 +1,8 @@
-interface IPerson {
-    name: string;
-    age?: number;
+declare const enum Directions {
+    up,
+    down,
+    left,
+    right
 }
 
-let tom: IPerson = {
-    name: 'tom',
-    age: 25,
-}
+let directions = [Directions.up, Directions.down, Directions.left, Directions.right];
