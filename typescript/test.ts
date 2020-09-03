@@ -1,8 +1,14 @@
-declare const enum Directions {
-    up,
-    down,
-    left,
-    right
+class Animal {
+    protected name;
+    protected constructor(name) {
+        this.name = name
+    }
 }
 
-let directions = [Directions.up, Directions.down, Directions.left, Directions.right];
+class Cat extends Animal {
+    constructor(name) {
+        super(name)
+        console.log(this.name)
+    }
+}
+
