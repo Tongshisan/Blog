@@ -1,5 +1,11 @@
 # 童十三的博客
 
+## 2020-09-08
++ [从网页中复制的图片不能粘贴到邮件正文中]()
+
+## 2020-09-01
++ [TypeScript 基础语法](https://tongshisan.github.io/Blog/typescript/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95)
+
 ## 2020-08-05
 + [padding 设置百分比]()
 + [js 最小二乘法]()
