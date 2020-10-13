@@ -19,3 +19,7 @@
 
     a.__proto__ === A.prototype
 ```
+
+
+
+![原型链](https://raw.githubusercontent.com/Tongshisan/Blog/master/img/%E5%8E%9F%E5%9E%8B%E9%93%BE.png)
