@@ -25,7 +25,7 @@
         obj.__proto__ = construct.prototype
         let res = construct.apply(obj, args
         
-        if(res && typeof res === 'object') || typeof res === 'function') return res
+        if(res && (typeof res === 'object' || typeof res === 'function')) return res
         return obj
     }
 ```
