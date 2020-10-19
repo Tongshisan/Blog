@@ -20,3 +20,35 @@
 
 ![document.getElementsByClassName()](https://raw.githubusercontent.com/Tongshisan/Blog/master/img/document.getElementsByClassName2.png)
 ![document.getElementsByClassName()](https://raw.githubusercontent.com/Tongshisan/Blog/master/img/document.getElementsByClassName3.png)
+
+
+
+获取元素的 offset
+
+```js
+element.offsetTop
+```
+
+`Element.offsetTop`, 只读属性, 返回当前元素相对于其 `offsetParent` 元素的顶部内边距的距离
+
+
+
+使用了 
+
+```js
+element.scrollTop = value
+```
+
+`Element.scrollTop` 属性可以读取或设置一个元素的内容垂直滚动的像素数
+
+无效, 原因待查证
+
+
+
+**最终解决方法**
+
+```js
+Element.scrollIntoView()
+```
+
+`Element.scrollIntoView()` 方法让当前的元素滚动到浏览器窗口的可视区域内。
