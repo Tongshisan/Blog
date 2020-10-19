@@ -1,5 +1,8 @@
 # 童十三的博客
 
+## 2020-19-19
++ [document.getElementsByClassName]()
+
 ## 2020-10-14
 + [js defer async]()
 
