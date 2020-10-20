@@ -21,6 +21,21 @@
 ![document.getElementsByClassName()](https://raw.githubusercontent.com/Tongshisan/Blog/master/img/document.getElementsByClassName2.png)
 ![document.getElementsByClassName()](https://raw.githubusercontent.com/Tongshisan/Blog/master/img/document.getElementsByClassName3.png)
 
+**判断当前 dom 是否加载完成, 加载完成后再调用 `document.getElementsByClassName`**
+
+`document.readyState` 返回当前文档的状态
+
+| 属性          | 文档状态                       |
+| ------------- | ------------------------------ |
+| uninitialized | 还未开始加载                   |
+| loading       | 加载中                         |
+| interactive   | 已加载, 文档与用户可以开始交互 |
+| complete      | 加载完成                       |
+
+ 
+
+**使用 `setTimeOut(fn, 0)` 来延迟执行 函数``**
+
 
 
 获取元素的 offset
