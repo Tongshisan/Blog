@@ -90,3 +90,23 @@ type 取值及含义
 | 2    | 通过前进或后退按钮或历史记录加载                   | performance.navigation.TYPE_BACK_FORWARD |
 | 255  | 任何其他来源加载                                   | performance.navigation.TYPE_UNDEFINED    |
 
+
+
+### performance.timeOrigin
+
+返回性能测量开始的高精度时间戳
+
+
+
+### performance.onresourcetimingbufferfull
+
+一个回调的  `EventTarget`, 当触发 `resourcetimingbufferfull` 回调的时候会调用
+
+
+
+### performance.timing
+
+返回 `PerformanceTiming` 对象, 包含了各种与浏览器性能相关的数据, 提供了浏览器处理页面的各个阶段的耗时
+
+<img src="https://raw.githubusercontent.com/Tongshisan/Blog/master/img/performance-timing.png" alt="performance-timing" style="zoom:50%;" />
+
