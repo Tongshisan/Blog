@@ -110,3 +110,135 @@ type 取值及含义
 
 <img src="https://raw.githubusercontent.com/Tongshisan/Blog/master/img/performance-timing.png" alt="performance-timing" style="zoom:50%;" />
 
+其整体结构可以参考下图
+
+<img src="https://raw.githubusercontent.com/Tongshisan/Blog/master/img/performance.png" alt="performance整体结构"  />
+
+`PerformanceTiming` 对象中的属性都是只读属性, 值都是精确到毫秒的时间戳
+
++ **`navigationStart`** : 返回当前浏览器窗口的前一个页面的关闭, 发生 `unload` 事件时的时间戳. 如果没有前一个页面, 则等于 `fetchStart` 属性
++ **`unloadEventStart`** : 如果前一个页面与当前页面同域, 则返回前一个页面 `unload` 事件发生时的时间戳, 如果没有前一个页面, 或者前一个页面与当前页面不同域, 则返回 0
++ **`unloadEventEnd`** :  返回 `unload` 事件处理程序结束之时的毫秒时间戳, 如果没有前一个页面或者与前一个页面不同域, 则返回 0
++ **`redirectStart`** : 返回第一个 `http` 的重定向开始时的时间戳, 如果没有发生重定向或其中一个重定向非同源, 则返回 0
++ **`redirectEnd`** : 返回最后一个 `http` 重定向被完成且 `http` 响应的最后一个字节被接收之时的时间戳,  如果没有发生重定向或其中一个重定向非同源, 则返回 0
++ **`fetchStart`** : 返回浏览器已经准备好使用 `http` 请求抓取文档时的时间戳, 在检查应用的缓存之前
++ **`domainLookupStart`** : 为域名开始解析之前的时间戳, 如果使用了持久连接或者使用了本地缓存 (也就是没有 `dns` 查询, 直接从缓存中取 `ip` ), 则与 `fetchStart` 相同
++ **`domainLookupEnd `** : 为解析域名结束时的时间戳,  如果使用了持久连接或者使用了本地缓存 (也就是没有 `dns` 查询, 直接从缓存中取 `ip` ), 则与 `fetchStart` 相同
++ **`connectStart`** : 请求连接被发送到网络之前的时间戳, 如果传输层报告错误并且连接的建立重新开始, 则把最后建立连接的时间作为该值。 如果使用了持久连接, 则与 `fetchStart` 相同
++ **`connectEnd`** : 网络链接建立的时间节点. 如果传输层报告了错误并且连接的建立重新开始, 则采用最后一次链接建立的时间, 如果使用了持久连接, 则与 `fetchStart` 相同。链接被认为打开以所有的链接握手, SOCKS 认证结束为标志
++ **`secureConnectionStart`** : 返回安全链接握手开始的时间戳, 如果不是安全链接, 则返回 0
++ **`requestStart`** : 返回浏览器发送从服务器或者缓存获取实际文档的请求时的时间戳, 如果传输层在请求开始之后发生错误并且连接被重新打开, 则返回新的请求的相应值
++ **`responseStart`** : 返回浏览器从服务器, 缓存或本地资源接收到响应的第一个字节时的时间戳
++ **`responseEnd`** : 返回浏览器从服务器, 缓存或本地资源接收到响应的最后一个字节 或者 连接被关闭时的时间戳
++ **`domLoading`** : 为解析器开始工作, 即 `Document.readyState` 改变为 `loading` 并且`readystatechange` 事件触发时的时间戳
++ **`domInteractive`** : 为主文档的解析器结束工作, 即 `Document.readyState` 改变为 `interactive`, 并且触发 `readystatechange` 事件触发时的时间戳. (这个属性被用于测量用户感受的加载网页的速度)
++ **`domContentLoadedEventStart`** : 为解析器发出 `DOMContentLoaded` 事件之前, 即所有需要被运行的脚本已经被解析之时的时间戳
++ **`domContentLoadedEventEnd`** : 为所有需要尽早执行的脚本执行完毕时的时间戳
++ **`domComplete`** : 为主文档的解析器结束工作, `Document.readyState` 改变为 `complete` 且 `readystatechange` 事件触发时的时间戳
++ **`loadEventStart`** : 为 `load` 事件被现在的文档触发之时的时间戳, 如果这个事件没有被触发, 则返回 0
++ **`loadEventEnd`** : 为 `load` 事件处理程序被终止, 加载事件已经完成之时的时间戳, 如果这个事件没有被触发或者事件没能完成, 返回 0
+
+
+
+## 常用的时间点
+
+
+
+### 页面加载完成时间: 代表了用户等待页面可用的时间
+
+```js
+let performance = window.performance
+let t = performance.timing
+let time = t.loadEventEnd - t.navigationStart
+```
+
+
+
+### 解析 DOM 树结构的时间: 判断 DOM 树嵌套情况
+
+```js
+let performance = window.performance
+let t = performance.timing
+let time = t.domComplete - t.responseEnd
+```
+
+
+
+### 重定向的时间
+
+```js
+let performance = window.performance
+let t = performance.timing
+let time = t.redirectEnd - t.redirectStart
+```
+
+
+
+### `DNS` 查询时间: 可做预加载, 缓存, 减少查询时间
+
+```js
+let performance = window.performance
+let t = performance.timing
+let time = t.domainLookupEnd - t.domainLookupStart
+```
+
+
+
+### 白屏时间: 读取第一个字节的时间
+
+```js
+let performance = window.performance
+let t = performance.timing
+let time = t.responseStart - t.navigationStart
+```
+
+
+
+### 内容加载完成的时间
+
+```js
+let performance = window.performance
+let t = performance.timing
+let time = t.responseEnd - t.responseStart
+```
+
+
+
+### 执行 `onload` 事件的时间
+
+```js
+let performance = window.performance
+let t = performance.timing
+let time = t.loadEventEnd - t.loadEventStart
+```
+
+
+
+### `DNS` 缓存时间
+
+```js
+let performance = window.performance
+let t = performance.timing
+let time = t.domainLookupStart - t.fetchStart
+```
+
+
+
+### 卸载页面的时间
+
+```js
+let performance = window.performance
+let t = performance.timing
+let time = t.unloadEventEnd - t.unloadEventStart
+```
+
+
+
+### TCP 建立连接完成握手的时间
+
+```js
+let performance = window.performance
+let t = performance.timing
+let time = t.connectEnd - t.connectStart
+```
+
