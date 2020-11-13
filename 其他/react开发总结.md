@@ -7,6 +7,14 @@
 组件的 `props` 和 `state` 要有具体的类型, 不能使用 `any`
 
 ```tsx
+// bad
+class Index extends React.Component<any, any> {
+  constructor(props: any) {
+    super(props)
+  }
+}
+
+// good
 interface IIndexProps {
   
 }
@@ -34,6 +42,7 @@ class Index extends React.Component<IIndexProps, IIndexState> {
 renderTable(): React.ReactNode {
   return (
     <div className="test-table">
+      ...
     </div>
   )
 }
