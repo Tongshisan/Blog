@@ -98,3 +98,26 @@ async fetchTableData(params: IFetchTableDataParams) {
 
   
 
+## 功能型函数 or 变量
+
+对于功能型函数 or 变量, 统一抽取 `Utils`
+
+```tsx
+// bad
+const userAgent = window.navigator.userAgent;
+const platfrom: string = /macintosh|mac os x/gi.test(userAgent) ? 'mac' : 'win'
+
+// good
+import {getPlatfrom} from '@test/utils/index'
+const platfrom: string = getPlatfrom()
+```
+
+utils/index.ts
+
+```ts
+export const getPlatfrom = () => {
+  const userAgent = window.navigator.userAgent;
+  return /macintosh|mac os x/gi.test(userAgent) ? 'mac' : 'win'
+}
+```
+
