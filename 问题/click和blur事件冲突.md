@@ -58,14 +58,19 @@ handleClick
 
 ```html
 ...
+	<input onblur="inputBlur()" />
 	<button onmousedown="mouseDown()" onmouseup="mouseUp()" onclick="handleClick()"><button>
   
   <script>
+    function inputBlur() {
+      console.log('inputBlur')
+    }
+    
   	function mouseDown() {
       console.log('mousedown')
     }  
     
-    function mouseup() {
+    function mouseUp() {
       console.log('mouseup')
     }
     
@@ -82,6 +87,7 @@ handleClick
 
 ```js
 mousedown
+inputBlur
 mouseup
 click
 ```
