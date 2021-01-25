@@ -35,7 +35,8 @@ let obj = {
 
 localStorage.setItem('person', JSON.stringify(obj))
 
-let p = JSON.parse(localStorage.getItem('person'))
+// 使用 JSON.parse() 时要判空, 否则 JSON.parse() 会挂
+let p = JSON.parse(localStorage.getItem('person') || '{}')
 
 typeof p 		// object
 ```
