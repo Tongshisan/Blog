@@ -100,6 +100,8 @@
 
 8. 图标使用 `<Icon>` 组件统一管理
 
+9. `postcss-px-to-viewport` 插件可以将 `px` 转换为 `vw`
+
 
 
 
