@@ -104,6 +104,8 @@
 
 10. `postcss-px-to-viewport` 插件可以将 `px` 转换为 `vw`
 
+11. `postcss-px-scale` 可将 px 缩放
+
 
 
 
@@ -351,3 +353,169 @@
    ```
 
    来取消滚动条, 页面重新加载后再移除此样式
+
+
+
+## 手撸组件
+
+1. 触底反弹组件
+
+   ```tsx
+   /*
+    * @Author: lizhi
+    * @Date: 2021-02-20 17:01:22
+    * @LastEditTime: 2021-03-01 17:31:46
+    * @LastEditors: Please set LastEditors
+    * @Description: 底部回弹 wrap
+    * @FilePath: /so-doc/ecloud-doc-mobile/src/newPage/components/Rebound/index.js
+    */
+   import * as React from 'react';
+   
+   // props: isFinish 判断是否滑到底部
+   class Rebound extends React.PureComponent {
+       constructor(props) {
+           super(props);
+           this.state = {
+               minY: 0,
+               maxY: 0,
+               wrapperHeight: 0,
+               offsetY: 0,
+               duration: 0,
+               bezier: 'linear',
+               startY: 0,
+               pointY: 0,
+               // 惯性滑动范围内的 startTime
+               startTime: 0,
+               // 惯性滑动范围内的 startY
+               momentumStartY: 0,
+               // 惯性滑动的启动 时间阈值
+               momentumTimeThreshold: 300,
+               // 惯性滑动的启动 距离阈值
+               momentumYThreshold: 15,
+               // start锁
+               isStarted: false,
+           };
+       }
+   
+       onTouchStart = (e) => {
+           this.setState({
+               isStarted: true,
+               duration: 0,
+               startY: Math.round(e.touches[0].pageY),
+               startTime: +new Date()
+           });
+       }
+   
+       onTouchMove = (e) => {
+           const {isStarted, wrapperHeight, startY} = this.state;
+           const {isFinish, children} = this.props;
+           const scrollRef = children.ref.current;
+           const disPatch = Math.round((startY - e.touches[0].pageY) / 3);
+           if (!isStarted || disPatch < 0) {
+               return;
+           }
+           if (isFinish) {
+               this.setState({
+                   offsetY: disPatch / 2,
+               }, () => {
+                   this.setScrollStyle(scrollRef);
+               });
+           }
+       }
+       onTouchEnd = (e) => {
+           const {children} = this.props;
+           const scrollRef = children.ref.current;
+           this.resetPosition(scrollRef);
+           this.setState({
+               isStarted: false,
+               duration: +new Date() - this.state.startTime
+           });
+       }
+   
+       getScrollStyle = () => {
+           const {offsetY, duration, bezier} = this.state;
+           return {
+               'transform': `translate3d(0, ${-offsetY}px, 0)`,
+               'transition-duration': `${duration}ms`,
+               'transition-timing-function': bezier,
+           };
+       }
+   
+       setScrollStyle = (dom) => {
+           const {offsetY, duration, bezier} = this.state;
+           dom.style.transform = `translate3d(0, ${-offsetY}px, 0)`;
+           dom.style['transition-duration'] = `${duration}ms`;
+           dom.style['transition-timing-function'] = 'cubic-bezier(.25, .46, .45, .94)';
+       }
+   
+       /**
+        * @description: 重置 children 位置,
+        * @param {*} resetPosition
+        * @return {*}
+        */
+       resetPosition = (dom) => {
+           const {offsetY, duration, bezier, startY} = this.state;
+           dom.style.transform = `translate3d(0, ${offsetY}px, 0)`;
+           dom.style['transition-duration'] = '500ms';
+           dom.style['transition-timing-function'] = 'cubic-bezier(.165, .84, .44, 1)';
+       }
+   
+       render() {
+           const {children} = this.props;
+           return (
+               <div
+                   className="rebound-wrap"
+                   onTouchStart={this.onTouchStart}
+                   onTouchMove={this.onTouchMove}
+                   onTouchEnd={this.onTouchEnd}
+               >
+                   <div style={this.getScrollStyle()}>
+                       {children}
+                   </div>
+               </div>
+           );
+       }
+   }
+   
+   export default Rebound;
+   ```
+
+   ```css
+   .rebound-wrap {
+       position: relative;
+   }
+   
+   .rebound-wrap div {
+       position: absolute;
+   }
+   ```
+
+   使用
+
+   ```jsx
+   import * as React from 'react';
+   import Rebound from '@page/components/Rebound';
+   
+   export default class Index extends React.component {
+     
+     constructor() {
+       this.scrollRef = React.createRef()
+     }
+     ...
+     render() {
+       return (
+       	<div>
+         	<Rebound
+           	isFinish={isFinish}
+           >
+             <div ref={this.scrollRef}></div>
+           </Rebound>
+         </div>
+       );
+     }
+     ...
+   }
+   ```
+
+   
+
