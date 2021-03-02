@@ -354,6 +354,28 @@
 
    来取消滚动条, 页面重新加载后再移除此样式
 
+   **补充:** 在本地以上方法可以完美解决问题, 但是部署上线后并没有什么用, 
+
+   **最终解决方案:**
+
+   ```jsx
+   <FileItem
+   	...
+     itemClick = () => {
+       this.setState({
+         dataSource: this.state.dataSource.cloneWithRow([])
+       }, () => {
+         setTimeout(() => {
+           // 一下是跳转路由代码
+           ...
+         }, 0)
+       })
+     }
+   >
+   ```
+
+   首先将页面数据清空, 然后在清空之后使用 `setTimeout` 
+
 
 
 ## 手撸组件
@@ -517,5 +539,38 @@
    }
    ```
 
-   
+2. Icon
 
+   ```jsx
+   import * as React from 'react';
+   import PropTypes from 'prop-types';
+   import '@assets/stle/icon.css';
+   
+   function Icon({type, onIconClick}) {
+     return (
+     	<i
+         className={`icon icon-${type}`}
+         onClick={onIconClick}
+       />
+     );
+   }
+   
+   Icon.propTypes = {
+     type: PropTypes.string.isRequired,
+     onIconClick: PropTypes.func
+   };
+   
+   export default Icon;
+   ```
+
+   Icon.css
+
+   ```css
+   .icon {
+     display: inline-block;
+     background-size: 100% 100%;
+     background-repeat: norepeat;
+   }
+   ```
+
+   
