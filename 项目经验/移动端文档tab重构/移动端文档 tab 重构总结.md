@@ -35,7 +35,8 @@
      "build": "node scripts/build.js",
      "build:rd": "dotenv -e .env.rd node scripts/build.js",
      "build:qa": "dotenv -e .env.qa node scripts/build.js",
-     "build:online": "dotenv -e .env.online node scripts/build.js"
+     "build:online": "dotenv -e .env.online node scripts/build.js",
+     "build:inline-rd": "dotenv -e .env.rd -e .env.inline node scripts/build.js"
    }
    ```
 

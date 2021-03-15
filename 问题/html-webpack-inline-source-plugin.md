@@ -67,3 +67,35 @@
 
    解决: // todo
 
+
+
+
+
+## 最终解决方案
+
+1. 只适用于 CRA 创建的项目
+
+```shell
+npm i --save-dev html-inline-css-webpack-plugin
+```
+
+webpack.config.js
+
+```js
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
+const HtmlInlineCssWebpackPlugin = require('html-inline-css-webpack-plugin').default;
+
+module.exports = {
+  ...
+  plugins: [
+    new HtmlWebpackPlugin(),
+    new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/runtime~.+[.]js/]),
+    new HtmlInlineCssWebpackPlugin()
+  ],
+  ...
+}
+```
+
+*[友情链接](https://webpack.eleven.net.cn/content/inline.html)*
+
