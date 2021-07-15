@@ -38,7 +38,7 @@ display: -webkit-box;
 
 ## 单行省略中间
 
-Garget: 我也不知道这是什么文件.md
+Target: 我也不知道这是什么文件.md
 
 Result: 我也不知...文件.md
 
