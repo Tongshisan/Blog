@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      margin: 20px;
+      padding: 12px;
+      width: 400px;
+      height: 40px;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <div id="create">点击创建数据库</div>
+  <div id="add">点击添加数据</div>
+  <div id="delData">删除数据</div>
+  <div id="delDatabase">删除数据库</div>
+
+  <script>
+    const create = document.getElementById('create');
+    const add = document.getElementById('add');
+    const delData = document.getElementById('delData');
+    const delDatabase = document.getElementById('delDatabase');
+
+    create.addEventListener('click', () => {
+      const openReq = window.indexedDB.open('test');
+      openReq.onsuccess = (e) => {
+        console.log('创建成功');
+        const db = openReq.result;
+        db.onversionchange = () => {
+          console.log('触发了 versionchange');
+          db.close();
+        }
+      }
+      openReq.onerror = (error) => {
+        console.log('创建失败', error);
+      }
+    })
+
+    delDatabase.addEventListener('click', (e) => {
+      const delReq = window.indexedDB.deleteDatabase('test');
+      delReq.onsuccess = () => {
+        console.log('删除数据库成功');
+      }
+      delReq.onerror = () => {
+        console.log('删除数据库失败');
+      }
+      delReq.onblocked = () => {
+        console.log('删除数据库被阻塞');
+      }
+    })
+  </script>
+</body>
+</html>
