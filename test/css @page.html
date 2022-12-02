@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @page {
+      margin-top: 200px;
+      color: aqua;
+      background-color: green;
+    }
+    .test {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="test">
+    测试 @page
+  </div>
+
+  <script>
+    const el = document.getElementsByClassName('test')[0];
+    el.addEventListener('click', (e) => {
+      // console.error('--', el.getComputedStyle())
+      console.log(window.getComputedStyle(el).backgroundColor)
+    })
+  </script>
+</body>
+</html>
