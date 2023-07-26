@@ -140,3 +140,15 @@ export default MyDocument
 
 ```
 
+
+
+
+
+## 环境变量
+
+将环境变量暴露给浏览器需添加 `NEXT_PUBLIC_` 前缀
+
+```env
+NEXT_PUBLIC_TEST='1111'
+```
+
