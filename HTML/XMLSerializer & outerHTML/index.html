@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>这是测试 div</div>
+  <!-- 这是注释 -->
+  <h1>这是测试 h1</h1>
+
+  <script>
+    const func1 = () => {
+      console.log('outerHTML', document.body.outerHTML);
+    }
+
+    const func2 = () => {
+      const serializer = new XMLSerializer();
+      const xmlString = serializer.serializeToString(document.body);
+      console.log('xmlString', xmlString);
+    }
+
+    func1();
+    func2();
+
+    const resultFunc1 = `outerHTML <body>
+      <div>这是测试 div</div>
+      <!-- 这是注释 -->
+      <h1>这是测试 h1</h1>
+
+      <script>
+        const func1 = () => {
+          console.log('outerHTML', document.body.outerHTML);
+        }
+
+        const func2 = () => {
+          const serializer = new XMLSerializer();
+          const xmlString = serializer.serializeToString(document.body);
+          console.log('xmlString', xmlString);
+        }
+
+        func1();
+        func2();
+      </script></body>
+    `;
+    const resultFunc2 = `
+    xmlString <body xmlns="http://www.w3.org/1999/xhtml">
+      <div>这是测试 div</div>
+      <!-- 这是注释 -->
+      <h1>这是测试 h1</h1>
+
+      <script>
+        const func1 = () =&gt; {
+          console.log('outerHTML', document.body.outerHTML);
+        }
+
+        const func2 = () =&gt; {
+          const serializer = new XMLSerializer();
+          const xmlString = serializer.serializeToString(document.body);
+          console.log('xmlString', xmlString);
+        }
+
+        func1();
+        func2();
+      </script></body>`;
+  </script>
+</body>
+</html>
