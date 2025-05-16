@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @layer theme, base, layout;
+      @layer base {
+        .test {
+          color: red;
+        }
+      }
+
+      @layer theme {
+        .test {
+          color: blue;
+        }
+      }
+
+      @layer layout {
+        .test {
+          color: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p class="test">测试 @layer</p>
+  </body>
+</html>
